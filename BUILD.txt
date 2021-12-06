@@ -103,6 +103,16 @@ On Fedora:
 sudo dnf install vtk-devel wxGTK3-devel ocl-icd-devel opencl-headers gcc-c++
 (and for recent versions of Fedora you will need to start Ready using 'GDK_BACKEND=x11 ./ready')
 
+On Arch, Manjaro:
+sudo pacman -S gtk3 libxt ocl-icd mesa vtk ospray openvr python-mpi4py pdal blosc wxgtk3 ccmake base-devel git
+sudo pacman -R openvdb -dd
+git clone https://github.com/AcademySoftwareFoundation/openvdb
+cd openvdb
+mkdir build
+cd build
+cmake ..
+make -j4 && make install
+
 On other distros I'm not sure - please let us know!
 
 B) Download and build Ready:
